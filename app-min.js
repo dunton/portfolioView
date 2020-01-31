@@ -1,0 +1,1 @@
+var express=require("express"),app=express(),path=require("path");app.get("/",function(e,p){p.sendFile(path.join(__dirname+"/index.html"))}),app.use(express.static(path.join(__dirname+"/css"))),app.use(express.static(path.join(__dirname+"/js"))),app.listen(3e3,function(){console.log("Listening on port 3000")});

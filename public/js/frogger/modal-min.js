@@ -1,0 +1,1 @@
+$(window).load(function(){$("#myModal").modal("show")});var modal=document.getElementById("myModal"),span=document.getElementsByClassName("close");span.onclick=function(){modal.style.display="none"},window.onclick=function(o){o.target===modal&&(modal.style.display="none")};

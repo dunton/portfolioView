@@ -1,0 +1,115 @@
+@media screen and (max-width: 984px) {
+
+	body, html {
+		height: 100%;
+		width: 100%;
+		font-family: 'Roboto Condensed', sans-serif;
+	}
+
+	.container-fluid {
+		 height:100%;"
+	}
+
+	.sideBar {
+		background-color: #3AD882;
+	}
+
+	.row {
+		height:100%;
+	}
+
+	.experience {
+		height: 100%;
+	}
+
+	.expBar {
+		background-color: #D1D3D2;
+		color: #D1D3D2;
+		height: 3px;
+	}
+
+	#objective {
+		font-style: italic;
+		font-size: 20px;
+	}
+
+	#skillsSection {
+		text-align: center;
+	}
+
+	#contact {
+		text-align: center;
+		padding-bottom: 3px;
+	}
+
+	#skills {
+		display: inline-block;
+	}
+
+	#company {
+		float: left;
+		font-size: 20px;
+	}
+
+	#dates {
+		float: right;
+		font-weight: bold;
+	}
+
+	#jobTitle {
+		float: left;
+		font-style: italic;
+	}
+
+	.title {
+		color: #3AD882;
+	}
+
+	#name {
+		text-align: center;
+	}
+
+	#objective {
+		text-align: center;
+	}
+
+	#development {
+		text-align: center;
+	}
+
+	#projectManagment {
+		text-align: center;
+	}
+
+	#mainName {
+		text-align: center;
+		padding-top: 5px;
+	}
+
+	#school {
+		font-size: 20px;
+	}
+
+	#major {
+		float: right;
+	}
+
+	#minor {
+		float: right;
+	}
+
+	#map {
+		height: 100%;
+		width: 100%;
+	}
+
+	#map-canvas {
+		height: 25%;
+		width: 100%;
+	}
+
+	#mapLocation {
+		height: 100%;
+	}
+
+}

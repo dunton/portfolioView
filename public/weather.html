@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./css/weather/style.css">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/twbs/bootstrap/48938155eb24b4ccdde09426066869504c6dab3c/dist/css/bootstrap.min.css">
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+    <title>Weather App</title>
+    <link rel="icon" href="media/headshot.png">
+    <style type="text/css">
+        #modal {
+            position: fixed;
+            font-family: Arial, Helvetica, sans-serif;
+            top: 0;
+            left: 0;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 99999;
+            height: 100%;
+            width: 100%;
+        }
+        .modalconent {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: #fff;
+            width: 50%;
+            padding: 20px;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="container"></div>
+    <div id="modal">
+          <div class="modalconent">
+               <h2>Weather Forecaster</h2>
+  
+              <p>I made a Weather Forecaster using REACT and Redux! Type in the city you would like to see forecasts for and it will output graphs showing the city map, temperature, pressure and humidity.</p>
+
+              <p>Type in a city and find out the weather forecast!</p>
+  
+              <a href="https://www.github.com/dunton/weatherForecast" target="_blank">Github Link</a>
+              <br>
+              <br>
+              <button id="button">Close</button>
+          </div>
+      </div>
+
+      <script>
+        window.onload = function () {
+            document.getElementById('button').onclick = function () {
+            document.getElementById('modal').style.display = "none"
+        };
+    };
+     </script>
+
+     <script src="./js/weather/bundle.js"></script>
+     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=places&key=AIzaSyAfYzQb_B91TMAnRbD-g9RCDOzBk0I6XP8"></script>
+  </body>
+  
+</html>

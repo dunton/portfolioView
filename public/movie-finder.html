@@ -1,0 +1,47 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name="theme-color" content="#000000"><link rel="manifest" href="/manifest.json"><link rel="shortcut icon" href="./favicon.ico"><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"><title>Movie Finder</title><link href="./css/movie-find/main.ae06a382.css" rel="stylesheet">
+<style type="text/css">
+        #modal {
+            position: fixed;
+            font-family: Arial, Helvetica, sans-serif;
+            top: 0;
+            left: 0;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 99999;
+            height: 100%;
+            width: 100%;
+        }
+        .modalconent {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: #fff;
+            width: 50%;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body><noscript>You need to enable JavaScript to run this app.</noscript><div id="root" class="container"></div><script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script><script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script><script type="text/javascript" src="./js/movie-find/main.951ebe99.js"></script>
+<div id="modal">
+          <div class="modalconent">
+               <h2>Movie Finder!</h2>
+  
+              <p>I wanted to get more familiar with the Flux data flow. So I used React, Flux and the IMDB API to create a movie searcher.</p>
+
+              <p>Type in a movie and see results with information from that film!</p>
+  
+              <a href="https://www.github.com/dunton/movie-finder" target="_blank">Github Link</a>
+              <br>
+              <br>
+              <button id="button">Close</button>
+          </div>
+      </div>
+
+      <script>
+        window.onload = function () {
+            document.getElementById('button').onclick = function () {
+            document.getElementById('modal').style.display = "none"
+        };
+    };
+     </script>
+</body></html>

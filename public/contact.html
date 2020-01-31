@@ -1,0 +1,124 @@
+<html>
+<head>
+  <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+  <title>Ryan Dunton</title>
+  <meta name="author" content="Ryan Dunton">
+  <meta name="description" content="Info About Ryan Dunton">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400" rel="stylesheet">
+  
+  <style>
+  body {
+    font-family: 'Lato', serif;
+    color: #444444
+  }
+  p{
+    font-size: 60px;
+    font-weight: 300;
+    margin: 0;
+    line-height: 95%
+  }
+  a.imp{
+    font-weight: 400;
+    color: #16411E;
+  }
+  .smlinks{
+    font-size: 25px;
+  }
+  p.daniel{
+    padding-top: 8vh;
+  }
+  .smlinks{
+    padding-top: 8px;
+  }
+  .fa{
+    color: #729E70;
+    padding-right: 5px;
+  }
+  .fa:hover{
+    text-decoration: none;
+    color: #326E32;
+  }
+
+  /* The Modal (background) */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+  }
+  </style>
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="col-sm-8 col-sm-offset-1">
+      <p class="daniel">Hello,<br>
+        My name is <a href="https://twitter.com/ryan_dunton" class="imp">Ryan Dunton</a>, and I am a <span class="imp">Software Developer</span> living in <span class="imp">New York City</span>.
+        Feel free to reach out with career opportunities, freelance work requests or if you want to have coffee! 
+        <p class="smlinks">
+          <a href="https://twitter.com/ryan_dunton" target="_blank"><i class="fa fa-twitter fa-3x" aria-hidden="true"></i></a><a href="https://www.linkedin.com/in/ryan-dunton-8b2ba152" target="_blank"><i class="fa fa-linkedin fa-3x" aria-hidden="true"></i></a>   <a href="https://github.com/dunton" target="_blank"><i class="fa fa-github fa-3x" aria-hidden="true"></i></a><i class="fa fa-mobile fa-3x" aria-hidden="true" onclick='displayPhone();'></i><i class="fa fa-envelope-o fa-3x" aria-hidden="true" onclick='displayEmail();'></i>
+        
+        <br>
+      </p>
+      <p id="email" style="display: none; font-size: 20px;">Email me at ryandunton1@gmail.com</p>
+      <p id= "phone" style = "display: none; font-size: 25px">Call me at 208-262-6461</p>
+    </div>
+  </div>
+ 
+      
+    <script>
+    	
+    function displayEmail() {
+      var element = document.getElementById('email');
+      if (element.style.display == 'none') {
+        element.style.display = 'block';
+      }
+      else {
+        element.style.display = 'none';
+      }
+      var phone = document.getElementById('phone');
+      if (phone.style.display == 'block') {
+        phone.style.display = 'none';
+      }
+
+    }
+
+    function displayPhone() {
+      var element = document.getElementById('phone');
+      if (element.style.display == 'none') {
+        element.style.display = 'block';
+      }
+      else {
+        element.style.display = 'none';
+      }
+      var email = document.getElementById('email');
+      if (email.style.display == 'block') {
+        email.style.display = 'none';
+      }
+    }
+    	
+    	
+
+    </script>
+  </body>
+  </html>

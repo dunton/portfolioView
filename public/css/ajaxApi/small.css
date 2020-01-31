@@ -1,0 +1,67 @@
+@media only screen and (max-width: 458px) {
+
+* {box-sizing:border-box;}
+body {
+    background-color: rgba(255,255,255,0.7);
+
+}
+
+#mobile {
+    display: block;
+}
+.bgimg {
+    position:fixed;
+    top: 0;
+    left: 0;
+    width:100%;
+    z-index:-1;
+    opacity:1;
+}
+
+#submit-btn {
+    background-color: #BFDCBF;
+}
+
+#form-container {
+    background-color: #EAEBEA;
+}
+
+
+
+.greeting {
+    color:black;
+    text-shadow: 1px 1px 3px rgba(255,255,255, .5);
+    text-align: center;
+}
+
+.wikipedia-container {
+    float:right;
+    width:290px;
+    padding:10px;
+    margin-right: 10px;
+    background-color: rgba(255,255,255,0.7);
+
+}
+
+.nytimes-container {
+    padding: 10px;
+    background-color: rgba(255,255,255,0.7);
+    float: left;
+    text-align: left;
+}
+
+.article-list {
+    margin: 0;
+    padding: 0;
+}
+
+.article {
+    list-style-type: none;
+    padding:10px;
+    border-top: 1px solid #CCC;
+}
+.article:first-child {
+    border-top:none;
+}
+
+}

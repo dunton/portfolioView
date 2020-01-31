@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Frogger with Bugs!</title>
+    <meta name="viewport" content="initial-scale=1">
+    <link rel="stylesheet" href="css/frogger/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="icon" href="media/headshot.png">
+    <style type="text/css">
+        #modal {
+            position: fixed;
+            font-family: Arial, Helvetica, sans-serif;
+            top: 0;
+            left: 0;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 99999;
+            height: 100%;
+            width: 100%;
+        }
+        .modalconent {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: #fff;
+            width: 50%;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+        <div class="col-md-12">
+	       <div class="score">
+	       	<div id="scoreId"></div>
+	       </div>
+
+            <div id="modal">
+                <div class="modalconent">
+                     <h1></h1>
+        
+                    <p>Basic game of Frogger. I built using Javascript's prototyping principles. Goal is to get your player to the water before he gets touched by a bug. Score counter on the top.</p>
+
+                    <p>NOT FOR PLAY ON MOBILE. Check out the desktop version ;)</p>
+        
+                    <a href="https://www.github.com/dunton/froggerGame">Github Link</a>
+                    <br>
+                    <br>
+                    <button id="button">Close</button>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <script src="js/frogger/resources.js"></script>
+    <script src="js/frogger/myjQuery.js"></script> 
+    <script src="js/frogger/engine.js"></script>
+    
+     <script src="js/frogger/app.js"></script>
+
+     <script>
+        window.onload = function () {
+            document.getElementById('button').onclick = function () {
+            document.getElementById('modal').style.display = "none"
+        };
+    };
+     </script>
+
+</body>
+</html>

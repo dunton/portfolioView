@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Your Moving Companion</title>
+    <!--<link rel="stylesheet" href="css/ajaxApi/style.css">-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <link rel = "stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+     <link rel = "stylesheet" media="screen and (min-width: 457px)" href="css/ajaxApi/style.css">
+      <link rel = "stylesheet" media="screen and (max-width: 456px)" href="css/ajaxApi/small.css">
+    <link rel="icon" href="media/headshot.png">
+</head>
+<body>
+<div class="container background">
+    <div class="row">
+      <div class="col-md-12">
+      <form id="form-container" class="form-container">
+          <label for="street">Street: </label><input type="text" id="street" value="">
+          <br id="mobile">
+          <label for="city">City: </label><input type="text" id="city" value="">
+          <button id="submit-btn">Submit</button>
+      </form>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+
+    <hr>
+
+
+    <h2 id="greeting" class="greeting">Where do you want to live?</h2>
+  </div>
+</div>
+  
+  <div class="row">
+    <div class="col-md-6">
+    <div class="nytimes-container">
+        <h3 id="nytimes-header">New York Times Articles</h3>
+        <ul id="nytimes-articles" class="article-list">What's going on in your new city? Enter an address and hit submit and the NY Times will tell you here!</ul>
+    </div>
+  </div>
+
+  <div class="col-md-6">
+
+    <div class="wikipedia-container">
+        <h3 id="wikipedia-header">Relevant Wikipedia Links</h3>
+        <ul id="wikipedia-links">Type in an address above and find relevant Wikipedia articles here!</ul>
+    </div>
+  </div>
+</div>
+
+
+    <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">AJAX API Location Page</h4>
+        </div>
+        <div class="modal-body">
+          <p>This simple webpage takes in your address and sends AJAX requests to Wikipedia, New York Times and Google Maps APIs</p>
+          <p>The page will then have information (if available) about the address you entered. Have Fun!</p>
+          <a href="http://www.github.com/dunton/ajaxAPI">Github Link</a>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+    
+    <script type="text/javascript" src="js/ajaxApi/modal.js"></script>
+    <!--<script src="js/ajaxApi/libs/jquery.min.js"></script>-->
+    <script src="js/ajaxApi/script.js"></script>
+</body>
+</html>

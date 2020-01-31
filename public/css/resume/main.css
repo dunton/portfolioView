@@ -1,0 +1,311 @@
+
+
+body {
+   font-family: 'Poppins', Helvetica, sans-serif;
+   height: 100%;
+   margin: 0;
+   padding: 0;
+}
+
+.sideBar {
+	background-color: #2b394f;
+	height: 100vh;
+
+}
+
+.mobile {
+	display: none;
+}
+
+.transition {
+	transform: scale(1.2);
+	padding-top: 50px;
+}
+
+.name {
+	text-align: center;
+}
+
+.cartoon-pic {
+	text-align: left;
+	height: 90px;
+	width: 90px;
+}
+
+.contact {
+	text-align: center;
+}
+
+#right-arrow {
+	max-width: 30%;
+	max-height: 30%;
+	margin-top: 400px;
+}
+
+#left-arrow {
+	max-width: 30%;
+	height: 30%;
+	margin-top: 400px;
+}
+
+.arrow {
+	height: 100%;
+	width: 50%;
+}
+
+.small-screen {
+	display: none;
+}
+
+.projectView {
+	display: block;
+	margin: auto;
+	width: 80%;
+	height: 80%;
+}
+
+#project0 {
+	display: none;
+}
+
+#projectHeader {
+	text-align: center;
+}
+
+#project1 {
+	display: none;
+}
+
+#project2 {
+	display: none;
+}
+
+#project3 {
+	display: none;
+}
+
+#project4 {
+	display: block;
+}
+
+#project5 {
+	display: none;
+}
+
+#project0-details {
+	display: none;
+}
+
+#project1-details {
+	display: none;
+}
+
+#project2-details {
+	display: none;
+}
+
+
+#projectDetails {
+	text-align: center;
+}
+
+hr {
+  border-top: solid gray 3px;
+	color: black;
+}
+
+.resources {
+	margin: auto;
+	
+}
+
+/* Place Navbar */
+.navbar {
+  position: absolute;
+  left: 30px;
+  width: 200px;
+  margin-top: 50px;
+  
+ 
+  -webkit-box-shadow: 1px 0 1px 0 rgba(0,0,0,.1);
+  box-shadow: 1px 0 1px 0 rgba(0,0,0,.1);
+ 
+  background-color: gray;
+}
+  .navbar i { margin-right: 10px; }
+  .navbar a.menu {
+    display: block;
+    margin: 0;
+    width: 100%;
+    height: 50px;
+    color: #444;
+    background-color: #fff;
+    font-size: 23px;
+    line-height: 50px;
+  }
+  .navbar .link {
+    position: relative;
+    display: block;
+    margin: 0;
+    width: 100%;
+    height: 50px;
+    z-index: 1;
+ 
+    perspective: 100px;
+    -webkit-perspective: 100px; /* Safari and Chrome */
+ 
+    transition: .23s; 
+    -webkit-transition: .23s;   
+  }
+    .navbar .link:hover { height: 150px; }
+      .navbar .link.large:hover { height: 230px; }
+ 
+    .navbar .link a { 
+      display: block;
+      color: #999; 
+      text-align: left;
+      padding-left: 20px;
+ 
+      transition: .3s; 
+      -webkit-transition: .3s;   
+    }
+      .navbar .link a:hover {     
+        color: #2b394f;
+        padding-left: 30px;
+      } 
+
+    .navbar .link span.active,
+    .navbar .link .hover-top,
+    .navbar .link .hover-bot {     
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 50px; /*50*/
+      line-height: 50px;
+      left: 0;
+      top: 0;
+      color: #777;
+      font-size: 12px;
+ 
+      transition: .23s; 
+      -webkit-transition: .23s;   
+    }
+ 
+      /* Larger foldout size */
+      .navbar .link.large .hover-top,
+      .navbar .link.large .hover-bot {
+        line-height: 30px;
+        height: 120px; /*90*/
+      }
+      /* Transforms how long distance is between main headers */
+      .navbar .link.large:hover .hover-bot {
+        transform: translateY(140px) rotateX( 0deg ); /*140px*/
+        -webkit-transform: translateY(140px) rotateX( 0deg );
+        background-color: #f0f0f0;
+      }
+ 
+    .navbar .link span.active { 
+      top: 0;     
+      left: 0;
+      background-color: #fff;
+      color: #aaa;
+      font-size: 13px;
+      border-top: 1px solid rgba(0,0,0,.1);
+    }
+ 
+    .navbar .link .hover-top {
+      top: 50px;
+      transform-origin: 0% 0% 0px;
+      -webkit-transform-origin: 0% 0% 0px;
+ 
+      transform: rotateX( -90deg );
+      -webkit-transform: rotateX( -90deg );
+      z-index: -1;
+ 
+      background-color: #fff;
+    }
+      .navbar .link:hover .hover-top {
+        transform: rotateX( 0deg );
+        -webkit-transform: rotateX( 0deg );
+        background-color: #f0f0f0;
+    }
+    .navbar .link .hover-bot {
+      transform-origin: 0% 100% 0px;
+      -webkit-transform-origin: 0% 100% 0px;
+ 
+      transform: rotateX( 130deg );
+      -webkit-transform: rotateX( 130deg );
+      z-index: -1;
+ 
+      background-color: #888;
+    }
+      .navbar .link:hover .hover-bot {
+        transform: translateY(100px) rotateX( 0deg );
+        -webkit-transform: translateY(100px) rotateX( 0deg );
+        background-color: #f0f0f0;
+      }
+     
+    .navbar .end {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      background-color: #fff;
+      border-top: 1px solid rgba(0,0,0,.1);
+    }
+
+#resume {
+	display: none;
+}
+
+#name {
+	text-align: center;
+}
+
+#living {
+	text-align: center;
+}
+
+#contactInfo {
+	text-align: center;
+}
+
+#skills {
+	text-align: center;
+	font-style: bold;
+}
+
+#resumeHR {
+	border-bottom: 10px;
+}
+
+.company {
+	text-align: left;
+}
+
+#location {
+	float: right;
+}
+
+.position: {
+	text-align: left;
+}
+
+
+.dates {
+	float: right;
+}
+
+#companyDescription {
+	text-align: left;
+}
+
+#schoolDates {
+	float: right;
+}
+
+.img-responsive {
+	height: 90%;
+	width: 90%;
+}
+

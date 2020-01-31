@@ -1,0 +1,44 @@
+img.header-resize{
+	width:20%;
+	height:20%;
+}
+
+body {
+	font-family: 'Lato', sans-serif;
+	color: #2d3c49;
+	font-weight: 300;
+}
+
+.hr {
+	
+	background-color:#7d97ad;
+	height: 5px;
+	margin-bottom: 25px;
+}
+
+.text-muted {
+	color: #7d97ad;
+}
+
+.text-thin {
+	font-weight: 100;
+}
+
+.title-logo {
+	margin-top: 20px;
+}
+
+.title-super {
+	font-size: 60px;
+}
+
+.thumbnail {
+	height: auto;
+	width: 100%;
+	max-width: 100%;
+}
+
+.main-image {
+	width: 100%;
+	height: auto;
+}

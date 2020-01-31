@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Angular Site</title>
+		<!-- Custom Font -->
+		<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+		<!-- Stylesheets, including Bootstrap and both CSS depinding on screen size-->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<link rel="stylesheet" media="screen and (min-width: 985px)" href="css/angularSite/css/main.css">
+		<link rel="stylesheet" media="screen and (max-width: 984px)" href="css/angularSite/css/small.css">
+		<!-- Minified Angular -->
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+		<!-- Google Maps API loaded asynchronously, don't abuse my key ;) --> 
+		<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=places&key=AIzaSyAfYzQb_B91TMAnRbD-g9RCDOzBk0I6XP8"></script>
+		<!-- JQuery -->
+		<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>	
+
+		<style type="text/css">
+        #modal {
+            position: fixed;
+            font-family: Arial, Helvetica, sans-serif;
+            top: 0;
+            left: 0;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 99999;
+            height: 100%;
+            width: 100%;
+        }
+        .modalconent {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: #fff;
+            width: 50%;
+            padding: 20px;
+        }
+        #button {
+        	background-color: #DADCDA;
+        }
+    </style>
+	</head>
+
+	<body ng-app = "Resume" ng-controller="contactInfo">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-4 sideBar">
+					<div id="mainName">
+						<div id="name">
+							<h1> {{ contact.Name }} </h1>
+							<hr>
+						</div>
+						<br>
+						<div id="objective">
+							<p> GOAL: {{ objective.objective }} </p>
+						</div>
+					</div>
+					<div id="skillsSection">
+						<h3>Technical Acumen</h3>
+						<hr>
+						<div id="development">
+							<div id = "titleDev">
+								<h4>Development Skills: </h4>
+							</div>
+							<div id = "skills">
+								<p><span ng-repeat='skill in skills.development'>{{ skill }}, </span> <ng-repeat-end></p>										
+							</div>
+						</div>
+						</br>
+						<div id="projectManagment">
+							<h4>Project Management Skills:</h4> 
+							<p><div id = "skills">
+								<p><span ng-repeat='skill in skills.projectManagement'>{{ skill }}, </span> <ng-repeat-end></p>
+							</div></p>
+						</div>
+					</div>
+
+					<div id="contact">
+						<h3>Contact</h3>
+						<hr>
+						<p>{{ contact.Phone }} | {{ contact.Email }}</p>
+					</div>
+				</div>
+				<div class="col-md-8 experience">
+					<div id="employment">
+						<span class="title"><h3>Work Experience</h3></span>
+						<hr class='expBar'>
+						<div id="jobs" ng-repeat="job in employment.jobs">
+							<p><span id="company">{{ job.Company }}</span>
+							<span id="dates">{{ job.Dates }}</span></p>
+							<br>
+							<br>
+							<p><span id="jobTitle">{{ job.Title }}</span></p>
+							<br>
+							<ul>
+								<li>{{job.Responsibilities[0]}}</li>
+								<li>{{job.Responsibilities[1]}}</li>
+								<li>{{job.Responsibilities[2]}}</li>
+							</ul>
+						</div>
+					</div>
+					<div id="education">
+						<span class="title"><h3>Education</h3></span>
+						<hr class='expBar'>
+						<div id="schooling">	
+							<span id="school">{{ education.education.School }}</span>
+							<br>
+							<p>Degree: {{ education.education.Degree }} <span id="major">Major: {{ education.education.Major }}</span>
+							<br>
+							GPA: {{ education.education.GPA }}<span id="minor">Minor: {{ education.education.Minor }}</span></p>
+						</div>
+					</div>
+					<div id="mapLocation">
+						<span class="title"><h3>Where I've Worked</h3></span>
+						<hr class='expBar'>
+						<div id="map-canvas">
+							<div id="map"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="modal">
+            <div class="modalconent">
+                 <h4>Angular Site Resume Example</h4>
+    			<hr>
+                <p>I was asked to provide an example resumé site. I built this using AngularJS interacting with the Google Maps API. </p>
+
+                <p>I was given the information to load into site which is why it is sparcely populated.</p>
+    
+                <a href="https://www.github.com/dunton/angularSite">Github Link</a>
+                <br>
+                
+                <hr>
+                <button id="button">Close</button>
+            </div>
+        </div>
+	</div>
+		<!-- Load in JS files -->
+		<script type="text/javascript" src="js/angularSite/js/resume.js"></script>
+		<script type="text/javascript" src="js/angularSite/js/map.js"></script>
+		<script>
+        window.onload = function () {
+            document.getElementById('button').onclick = function () {
+            document.getElementById('modal').style.display = "none"
+        };
+    };
+     </script>
+	</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Neighborhood Map</title>
+		<link rel="stylesheet" href="css/neighborhoodMap/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+		<link rel = "stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	</head>
+	<body>
+      <div class="row">
+      	<div class="col-xs-12">
+      		<div class="top">
+      			<h1>Explore My Neighborhood!</h1>
+      		</div>
+      	</div>
+        <div id="ajaxData"></div>
+      </div>
+      <div class="row">
+      	<div class="col-xs-6 search-form">
+      		<input class="search search-form" type="text" placeholder="Filter Locations" data-bind="textInput: filter" />
+           <ul data-bind="foreach: filteredArray" class="list-view"> 
+      		 	<li class="item">
+                <span data-bind="text: title, click: $parent.showClick">
+              </li>
+    			 </ul>
+    		</div>
+        <div class="col-xs-6"></div>
+    	</div>
+      <div class="row">
+          <div id="map"></div>
+      </div>
+      <!-- Modal -->
+      <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+    
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Neighborhood Map!</h4>
+          </div>
+          <div class="modal-body">
+            <p>This is a map of some locations near my apartment on the Upper West Side.</p>
+            <p>I built this using Knockout, the Google Maps API and Bootstrap.</p>
+            <p>Type in locations to see filter functionality or click on locations for more information. Have Fun!</p>
+            <a href = "github.com/dunton/neighborhoodMap">Link to Github</a></p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="js/neighborhoodMap/modal.js"></script>
+    <script type="text/javascript" src="js/neighborhoodMap/knockout/knockout-min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=places&key=AIzaSyAfYzQb_B91TMAnRbD-g9RCDOzBk0I6XP8"></script>
+		<script async type="text/javascript" src="js/neighborhoodMap/newscript.js"></script>
+	</body>
+</html>

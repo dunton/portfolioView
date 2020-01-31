@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#000000">
+    
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
+    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="css/todo/TodoList.css">
+    <link rel="stylesheet" type="text/css" href="css/todo/index.css">
+    <title>Todo List</title>
+    <!-- JQuery -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script> 
+
+    <style type="text/css">
+        #modal {
+            position: fixed;
+            font-family: Arial, Helvetica, sans-serif;
+            top: 0;
+            left: 0;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 99999;
+            height: 100%;
+            width: 100%;
+        }
+        .modalconent {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: #fff;
+            width: 50%;
+            padding: 20px;
+        }
+        #button {
+          background-color: #DADCDA;
+        }
+    </style>
+  </head>
+  <body>
+    <noscript>
+      You need to enable JavaScript to run this app.
+    </noscript>
+    <div id="container"></div>
+    <div id="modal">
+        <div class="modalconent">
+             <h4>ToDo List App</h4>
+        <hr>
+            <p>I built this simple Todo List App using React </p>
+
+            <p>Simple design and interaction of React Components where you can add tasks and click the task to clear it from your list.</p>
+
+            <a href="https://github.com/dunton/todoApp-react">Github Link</a>
+            <br>
+            
+            <hr>
+            <button id="button">Close</button>
+        </div>
+  </body>
+  <script src="js/todo/bundle.js"></script>
+  <script>
+        window.onload = function () {
+            document.getElementById('button').onclick = function () {
+              document.getElementById('modal').style.display = "none";
+              document.getElementsByTagName("body")[0].style.backgroundColor = "#66CCFF" 
+        };
+    };
+  </script>
+
+</html>

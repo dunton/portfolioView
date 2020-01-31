@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./css/ryantube/style.css">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/twbs/bootstrap/48938155eb24b4ccdde09426066869504c6dab3c/dist/css/bootstrap.min.css">
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+    <title>Ryantube</title>
+
+    <link rel="icon" href="media/headshot.png">
+    <style type="text/css">
+        #modal {
+            position: fixed;
+            font-family: Arial, Helvetica, sans-serif;
+            top: 0;
+            left: 0;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 99999;
+            height: 100%;
+            width: 100%;
+        }
+        .modalconent {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: #fff;
+            width: 50%;
+            padding: 20px;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="container"></div>
+
+    <div id="modal">
+          <div class="modalconent">
+               <h2>Ryantube!</h2>
+  
+              <p>I recreated Youtube using REACT. It was a great way to learn state management and familiarize myself with different React tools.</p>
+
+              <p>I'm a huge Office nerd so I set the homepage to some of its best moments, however feel free to search for whatever you like!</p>
+  
+              <a href="https://www.github.com/dunton/ryantube" target="_blank">Github Link</a>
+              <br>
+              <br>
+              <button id="button">Close</button>
+          </div>
+      </div>
+
+      <script>
+        window.onload = function () {
+            document.getElementById('button').onclick = function () {
+            document.getElementById('modal').style.display = "none"
+        };
+    };
+     </script>
+     <script src="./js/ryantube/bundle.js"></script>
+
+  </body>
+  
+</html>
